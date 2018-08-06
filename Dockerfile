@@ -1,5 +1,6 @@
 FROM ruby:2.5
 RUN apt-get update -qq && apt-get install -y build-essential libpq-dev nodejs
+COPY irbrc /root/.irbrc
 RUN mkdir /myapp
 WORKDIR /myapp
 COPY myapp/Gemfile /myapp/Gemfile
